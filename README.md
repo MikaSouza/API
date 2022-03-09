@@ -14,3 +14,4 @@
 | 429   | Too Many Requests     |
 | 500   | Internal error     |
 
+# API
