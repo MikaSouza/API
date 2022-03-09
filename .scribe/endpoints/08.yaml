@@ -1,0 +1,190 @@
+name: Usuários
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: api/v1/users
+    metadata:
+      title: ''
+      description: ''
+      authenticated: true
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"code":401,"success":false,"error":["Usu\u00e1rio n\u00e3o autenticado"],"message":"Fa\u00e7a login e tente novamente"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: api/v1/users
+    metadata:
+      title: ''
+      description: ''
+      authenticated: true
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: 'O campo value não pode ser superior a 255 caracteres.'
+        required: true
+        example: rpkeuzeorhskmfzefwqwsqscwgsmsbrltidztznfytaizctwyxqowmftbaeuugdenyfzgkedlllxyvzibxxfdtreuiypdhhwqtrmrbpwwujpezihyfbxbzobvhcdrqafjihbhowv
+        type: string
+      surname:
+        name: surname
+        description: 'O campo value não pode ser superior a 255 caracteres.'
+        required: true
+        example: ysmphuclerexdsvkttopxgokrvuluwivaadrnpbfxqkvppfnlcsswcqdsrmsmrjktkbulpashugziwlftawzqmtzqovoutmujmpywqicbsldkgezmbjiaydyuywasnpwxbemwjcdesgjqnqxrutokocvlnvsxxpkksemvcclfkhuujvjxdcxfogtuuindggtedhddqhmarerlzouswfizkwjtsutitgdizqmpfuwdnb
+        type: string
+      email:
+        name: email
+        description: 'O campo value deve ser um endereço de e-mail válido.'
+        required: true
+        example: kim.heaney@example.net
+        type: string
+      password:
+        name: password
+        description: 'O campo value deve ter pelo menos 6 caracteres.'
+        required: true
+        example: fbufh
+        type: string
+      company_id:
+        name: company_id
+        description: 'O campo value deve ser pelo menos 1.'
+        required: true
+        example: 0
+        type: integer
+      is_admin:
+        name: is_admin
+        description: ''
+        required: true
+        example: false
+        type: boolean
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/v1/users/{id}'
+    metadata:
+      title: ''
+      description: ''
+      authenticated: true
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the user.'
+        required: true
+        example: 6
+        type: integer
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"code":401,"success":false,"error":["Usu\u00e1rio n\u00e3o autenticado"],"message":"Fa\u00e7a login e tente novamente"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - PUT
+      - PATCH
+    uri: 'api/v1/users/{id}'
+    metadata:
+      title: ''
+      description: ''
+      authenticated: true
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the user.'
+        required: true
+        example: 3
+        type: integer
+    queryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: 'O campo value não pode ser superior a 255 caracteres.'
+        required: true
+        example: pjaallpohmwrddcrvltxcfyoiyoexehdcdwytgbtfhwanoarwaqmrjddrfhntufqxtlhfmvytetdidfsres
+        type: string
+      surname:
+        name: surname
+        description: 'O campo value não pode ser superior a 255 caracteres.'
+        required: true
+        example: gudzwuaiyldylxyzgmbhpdmeldzcpxalccgnjibzxsuzmcmaikygbnlplpbqvrkagebodhirylnykriexcdrxosmddtcbnntdjnspxzvenlsxgbsomaidkptpjwaheqonvhbxdaxaareiqksffixsmqgbhwtaxbxjeqmgeokbnkamjmqug
+        type: string
+      password:
+        name: password
+        description: 'O campo value deve ter pelo menos 6 caracteres.'
+        required: true
+        example: d
+        type: string
+      company_id:
+        name: company_id
+        description: 'O campo value deve ser pelo menos 1.'
+        required: true
+        example: 0
+        type: integer
+      is_admin:
+        name: is_admin
+        description: ''
+        required: true
+        example: false
+        type: boolean
+      email:
+        name: email
+        description: 'E-mail do usuário.'
+        required: true
+        example: magni
+        type: string
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/v1/users/{id}'
+    metadata:
+      title: ''
+      description: ''
+      authenticated: true
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the user.'
+        required: true
+        example: 14
+        type: integer
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []

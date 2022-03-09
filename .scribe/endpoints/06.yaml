@@ -1,0 +1,59 @@
+name: 'Recuperação de senha'
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - POST
+    uri: api/v1/password/forgot
+    metadata:
+      title: ''
+      description: ''
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters:
+      email:
+        name: email
+        description: 'O campo value deve ser um endereço de e-mail válido.'
+        required: true
+        example: kayla.kuhlman@example.org
+        type: string
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: api/v1/password/reset
+    metadata:
+      title: ''
+      description: ''
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters:
+      token:
+        name: token
+        description: ''
+        required: true
+        example: enim
+        type: string
+      email:
+        name: email
+        description: 'O campo value deve ser um endereço de e-mail válido.'
+        required: true
+        example: mueller.bill@example.com
+        type: string
+      password:
+        name: password
+        description: ''
+        required: true
+        example: aut
+        type: string
+    responses: []
+    responseFields: []

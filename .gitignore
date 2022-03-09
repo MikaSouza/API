@@ -1,0 +1,36 @@
+/vendor/
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Laravel 4 specific
+bootstrap/compiled.php
+app/storage/
+
+# Laravel 5 & Lumen specific
+public/storage
+public/hot
+
+# Laravel 5 & Lumen specific with changed public path
+public_html/storage
+public_html/hot
+
+storage/*.key
+.env
+Homestead.yaml
+Homestead.json
+/.vagrant
+.phpunit.result.cache
+.editorconfig
+
+.scribe/endpoints/00.yaml
+.scribe/endpoints/01.yaml
+.scribe/endpoints/02.yaml
+.scribe/endpoints/03.yaml
+.scribe/endpoints/04.yaml
+.scribe/endpoints.cache/00.yaml
+.scribe/endpoints.cache/01.yaml
+.scribe/endpoints.cache/02.yaml
+.scribe/endpoints.cache/03.yaml
+.scribe/endpoints.cache/04.yaml
+resources/views/scribe/index.blade.php
